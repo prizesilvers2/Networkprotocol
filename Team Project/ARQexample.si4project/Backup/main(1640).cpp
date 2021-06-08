@@ -94,6 +94,8 @@ int main(void){
 
     pc.printf("endnode : %i, dest : %i\n", endNode_ID, dest_ID);
 
+	pc.printf("------------------If you are a sender, please press 1--------------------------\n");
+
     arqLLI_initLowLayer(endNode_ID);
     pc.attach(&arqMain_processInputWord, Serial::RxIrq);
 
