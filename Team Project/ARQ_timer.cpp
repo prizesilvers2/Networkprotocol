@@ -24,6 +24,14 @@ void arqTimer_startTimer()
     timerStatus = 1;
 }
 
+void RX_arqTimer_startTimer()
+{
+    uint8_t waitTime = ACK_ARQTIMER_MINWAITTIME + rand()%(ACK_ARQTIMER_MAXWAITTIME-ACK_ARQTIMER_MINWAITTIME);
+    timer.attach(arqTimer_timeoutHandler, waitTime);
+    timerStatus = 1;
+}
+
+
 void arqTimer_stopTimer()
 {
     timer.detach();
@@ -34,3 +42,4 @@ uint8_t arqTimer_getTimerStatus()
 {
     return timerStatus;
 }
+

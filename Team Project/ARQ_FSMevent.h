@@ -1,11 +1,13 @@
 typedef enum arqEvent
 {
-    arqEvent_dataTxDone = 0,
-    arqEvent_ackTxDone = 1,
-    arqEvent_ackRcvd = 2,
-    arqEvent_dataRcvd = 3,
-    arqEvent_dataToSend = 4,
-    arqEvent_arqTimeout = 5
+	arqEvent_dataTxDone = 0,
+	arqEvent_ackTxDone = 1,
+    arqEvent_dataRcvd = 2,		// PDU IN
+    arqEvent_ackRcvd = 3,
+    arqEvent_SDUIN	= 4,		// DataToSend
+    arqEvent_arqTimeout = 5,
+    arqEvent_UPLOAD =6
+    
 } arqEvent_e;
 
 
